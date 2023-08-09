@@ -3,7 +3,7 @@ const posts = document.getElementById('posts')
 posts.innerHTML = ''
 
 const subreddit = `all`
-fetch(`https://www.reddit.com/r/${subreddit}.json`)
+fetch(`https://api.reddit.com/r/${subreddit}.json`)
     .then(res => res.json())
     .then(json => {
         console.log(json.data.children)
